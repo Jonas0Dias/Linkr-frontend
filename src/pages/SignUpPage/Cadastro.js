@@ -9,14 +9,14 @@ import { Animated } from "react-animated-css"
 export default function Cadastro(props) {
 
     const navigate = useNavigate();
-    const [usuario, setUsuario] = React.useState({ email: '', name: '', password: '', confirmPassword: '' }) // estado que pega as informações do cadastro
+    const [usuario, setUsuario] = React.useState({ email: '', name: '', password: '', pictureUrl: '' }) // estado que pega as informações do cadastro
     const [entrar, setEntrar] = React.useState('Sign Up') // estado que serve apenas para mudar o nome 'sign Up' para os 3 pontinhos enquantos estiver fazendo a requisição
 
     async function handleButton() {
         setEntrar('')
         props.setHabilitado(true)
 
-        axios.post(`${process.env.REACT_APP_API_URL}/users`, usuario)
+        axios.post(`${process.env.REACT_APP_API_URL}/signup`, usuario)
             .then(() => {
                 props.setHabilitado(false);
                 navigate('/')
@@ -70,9 +70,9 @@ the best links on the web</p>
                         disabled={props.habilitado}
                     />
                     <input
-                        type='password'
-                        placeholder="confirme sua senha"
-                        onChange={e => setUsuario({ ...usuario, confirmPassword: e.target.value })}
+                        type='url'
+                        placeholder="picture URL"
+                        onChange={e => setUsuario({ ...usuario, pictureUrl: e.target.value })}
                         disabled={props.habilitado}
                     />
                     <StyledButton onClick={() => handleButton()}>

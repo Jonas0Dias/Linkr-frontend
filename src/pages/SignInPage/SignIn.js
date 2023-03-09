@@ -18,7 +18,7 @@ export default function Login(props) {
         setEntrar('')
         props.setHabilitado(true)
 
-        axios.post(`${process.env.REACT_APP_API_URL}/login`, props.login)
+        axios.post(`${process.env.REACT_APP_API_URL}/signin`, props.login)
             .then((res) => {
                 // console.log(res.data)
                 props.setDadosUsuario(res.data)

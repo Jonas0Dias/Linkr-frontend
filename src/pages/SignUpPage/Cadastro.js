@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import axios from "axios"
 import React from "react"
 import { useNavigate } from "react-router-dom"
-import { Title, StyledInputs, Wrapper, StyledButton } from "../SignInPage/SignInStyle"
+import { Title, StyledInputs, Wrapper, StyledButton, Wrapper2 } from "../SignInPage/SignInStyle"
 import ThreeDotsLoader from "../../components/Loaders/ThreeDotsLoader"
 import { Animated } from "react-animated-css"
 
@@ -30,24 +30,14 @@ export default function Cadastro(props) {
     return (
         <Wrapper>
 
-            <Animated
-                animationIn="fadeInDown"
-                animationInDuration={1000}
-                animationOutDuration={1000}
-                isVisible={true}
-            >
+            
                  <Title>
                     <h1>linkr</h1>
                     <p>save, share and discover
 the best links on the web</p>
                 </Title>
-            </Animated>
-            <Animated
-                animationIn="fadeInUp"
-                animationInDuration={1000}
-                animationOutDuration={1000}
-                isVisible={true}
-            >
+            
+            <Wrapper2>
                 <StyledInputs>
                     <input
                         type='text'
@@ -80,7 +70,8 @@ the best links on the web</p>
                     </StyledButton>
                 </StyledInputs>
                 <Link to='/'><p className="cadastro"> Switch back to log in</p></Link>
-            </Animated>
+                </Wrapper2>
+            
         </Wrapper>
     )
 }

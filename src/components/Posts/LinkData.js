@@ -33,6 +33,7 @@ const StyledDiv = styled.div`
 	border-radius: 11px;
 	display: flex;
 	overflow: hidden;
+	cursor: pointer;
 `;
 
 const Title = styled.h4`

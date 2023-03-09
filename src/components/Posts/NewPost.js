@@ -9,11 +9,14 @@ export default function NewPost() {
 			<RightBox>
 				<Title>What are you going to share today?</Title>
 
-				<form>
+				<StyledForm>
 					<URLInput />
 					<TextInput />
-					<StyledButton>Publish</StyledButton>
-				</form>
+
+					<ButtonContainer>
+						<StyledButton>Publish</StyledButton>
+					</ButtonContainer>
+				</StyledForm>
 			</RightBox>
 		</StyledDiv>
 	);
@@ -63,21 +66,31 @@ const InputModel = styled.input`
 	border: none;
 `;
 
+const StyledForm = styled.form`
+	display: flex;
+	flex-direction: column;
+`;
+
 const URLInput = styled(InputModel)`
 	height: 30px;
-	margin-bottom: 15px;
+	margin-bottom: 7px;
 `;
 const TextInput = styled(InputModel)`
 	height: 65px;
+	margin-bottom: 10px;
+`;
+const ButtonContainer = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: right;
 `;
 
 const StyledButton = styled.button`
 	width: 112px;
 	height: 31px;
-
 	background: #1877f2;
 	border-radius: 5px;
-
 	font-family: "Lato";
 	font-style: normal;
 	font-weight: 700;
@@ -85,5 +98,4 @@ const StyledButton = styled.button`
 	line-height: 17px;
 	color: #ffffff;
 	border: none;
-	float: left;
 `;

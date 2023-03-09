@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LinkData from "./LinkData";
 
 export default function Post() {
 	return (
@@ -12,6 +13,8 @@ export default function Post() {
 					Muito maneiro esse tutorial de Material UI com React, deem
 					uma olhada! #react #material
 				</Text>
+
+				<LinkData />
 			</RightBox>
 		</StyledDiv>
 	);
@@ -19,7 +22,6 @@ export default function Post() {
 
 const StyledDiv = styled.div`
 	width: 100%;
-	height: 209px;
 	background: #171717;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 16px;
@@ -39,7 +41,10 @@ const LeftBox = styled.div`
 	margin-right: 25px;
 `;
 
-const RightBox = styled.div``;
+const RightBox = styled.div`
+	width: 100%;
+	height: 100%;
+`;
 
 const InputModel = styled.input`
 	width: 100%;
@@ -65,4 +70,5 @@ const Text = styled.p`
 	font-size: 17px;
 	line-height: 20px;
 	color: #b7b7b7;
+	margin-bottom: 20px;
 `;

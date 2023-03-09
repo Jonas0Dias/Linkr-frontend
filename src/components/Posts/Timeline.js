@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import NewPost from "./NewPost";
-import Post from "./Post";
+import Posts from "./Posts";
 
 function Timeline() {
 	return (
 		<StyledSection>
 			<SectionTitle>timeline</SectionTitle>
 			<NewPost />
-			<Post />
+			<Posts />
 		</StyledSection>
 	);
 }

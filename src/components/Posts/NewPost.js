@@ -10,8 +10,8 @@ export default function NewPost() {
 				<Title>What are you going to share today?</Title>
 
 				<StyledForm>
-					<URLInput />
-					<TextInput />
+					<URLInput placeholder="http://..." />
+					<TextInput placeholder="Awesome article about #javascript" />
 
 					<ButtonContainer>
 						<StyledButton>Publish</StyledButton>
@@ -64,6 +64,17 @@ const InputModel = styled.input`
 	background: #efefef;
 	border-radius: 5px;
 	border: none;
+	box-sizing: border-box;
+	padding-left: 20px;
+
+	::placeholder {
+		font-family: "Lato";
+		font-style: normal;
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 18px;
+		color: #949494;
+	}
 `;
 
 const StyledForm = styled.form`

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import LinkData from "./LinkData";
 import { FaRegHeart as LikeIcon, FaHeart as LikedIcon } from "react-icons/fa";
+import {
+	RiEdit2Fill as EditIcon,
+	RiDeleteBin6Line as DeleteIcon,
+} from "react-icons/ri";
 import { useState } from "react";
 
 export default function Post() {
@@ -20,8 +24,16 @@ export default function Post() {
 
 				<LikesCount>{likeCounts} likes</LikesCount>
 			</LeftBox>
+
 			<RightBox>
-				<UserName>Joao</UserName>
+				<TopLine>
+					<UserName>Joao</UserName>
+					<div className="div">
+						<EditIcon className="icon" />
+						<DeleteIcon className="icon" />
+					</div>
+				</TopLine>
+
 				<Text>
 					Muito maneiro esse tutorial de Material UI com React, deem
 					uma olhada! #react #material
@@ -43,7 +55,7 @@ const StyledDiv = styled.div`
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 16px;
 	box-sizing: border-box;
-	padding: 18px;
+	padding: 18px 22px 20px 18px;
 	display: flex;
 `;
 
@@ -53,6 +65,18 @@ const ProfilePicture = styled.img`
 	border-radius: 26.5px;
 	background-color: brown;
 	margin-bottom: 25px;
+`;
+
+const TopLine = styled.div`
+	display: flex;
+	justify-content: space-between;
+
+	.icon {
+		color: white;
+		font-size: 20px;
+		margin-left: 10px;
+		cursor: pointer;
+	}
 `;
 
 const LeftBox = styled.div`

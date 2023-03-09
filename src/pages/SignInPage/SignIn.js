@@ -5,7 +5,7 @@ import { Animated } from "react-animated-css";
 import axios from "axios";
 import TransparentBackground from "../../components/Background/TransparentBackground";
 import ThreeDotsLoader from "../../components/Loaders/ThreeDotsLoader";
-import { StyledButton, Title, StyledInputs, Wrapper } from "./SignInStyle";
+import { StyledButton, Title, StyledInputs, Wrapper, Wrapper2 } from "./SignInStyle";
 
 export default function Login(props) {
 
@@ -18,7 +18,7 @@ export default function Login(props) {
         setEntrar('')
         props.setHabilitado(true)
 
-        axios.post(`${process.env.REACT_APP_API_URL}/login`, props.login)
+        axios.post(`${process.env.REACT_APP_API_URL}/signin`, props.login)
             .then((res) => {
                 // console.log(res.data)
                 props.setDadosUsuario(res.data)
@@ -39,23 +39,15 @@ export default function Login(props) {
             
           
 
-            <Animated
-                animationIn="fadeInDown"
-                animationInDuration={1000}
-                isVisible={true}
-            >
+            
                 <Title>
                     <h1>linkr</h1>
                     <p>save, share and discover
 the best links on the web</p>
                 </Title>
-            </Animated>
+            
 
-            <Animated
-                animationIn="fadeInUp"
-                animationInDuration={1200}
-                isVisible={true}
-            >
+                <Wrapper2>
                 <StyledInputs>
                     <input
                         type='email'
@@ -75,7 +67,7 @@ the best links on the web</p>
                 </StyledInputs>
 
                 <Link to='/cadastro'><p className="cadastro" >First time? Create an account!</p></Link>
-            </Animated>
+                </Wrapper2>
         </Wrapper>
     )
 }

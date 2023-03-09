@@ -1,12 +1,19 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
+
     height: 100vh;
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background: rgb(59 58 58);
+
+    @media (min-width: 700px){
+        flex-direction: row;
+    }
+
+    
 
  
 
@@ -48,6 +55,19 @@ export const Wrapper = styled.div`
         align-items: center;
     }
 `
+
+export const Wrapper2 = styled.div`
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(59 58 58);
+    padding: 20px;;
+    @media (min-width: 700px){
+        width: 30%;
+    }
+`
 export const Title = styled.div`   
     display:flex;
     justify-content: center;
@@ -83,21 +103,31 @@ export const Title = styled.div`
         color: #FFFFFF;
             
     }
+
+    @media (min-width: 700px){
+        height:100%;
+        width: 70%;
+        position: relative;
+    }
+
    
 `
 
 export const StyledInputs = styled.div`
 
     display:flex;
-    width: 300px;
+    width: 100%;
     flex-direction: column;
     margin: 30px auto;
+    padding: 10px;
+    width: 100%;
 
     input   {
         margin: auto;
         margin-bottom: 25px;
         padding: 10px;
-        width: 300px;
+        width: 100%;
+        box-sizing: border-box;
         height: 45px;
         background: #FFFFFF;
         border: 1px solid #D5D5D5;
@@ -116,6 +146,12 @@ export const StyledInputs = styled.div`
             transform: translate(-10px, 0); 
         }
     }
+
+    @media (min-width: 700px){
+        /* height:100%; */
+        width: 100%;
+        
+    }
 `
 
 export const StyledButton = styled.button`
@@ -123,7 +159,7 @@ export const StyledButton = styled.button`
 background: #1877F2;
     border-radius: 5px;
     border: none;
-    width: 300px;
+    width: 100%;
     height: 45px;
     font-family: 'Oswald';
     font-style: normal;
@@ -139,5 +175,12 @@ background: #1877F2;
     :hover{
         scale: 0.96;        
         cursor: pointer;
+    }
+
+    @media (min-width: 700px){
+        /* height:100%; */
+        width: 100%;
+        padding: 10px;
+        
     }
 `

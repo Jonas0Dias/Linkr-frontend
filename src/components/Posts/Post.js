@@ -7,14 +7,14 @@ import {
 } from "react-icons/ri";
 import { useState } from "react";
 
-export default function Post() {
+export default function Post({ userName, text, userImg }) {
 	const [liked, setLiked] = useState(false);
 	const likeCounts = 10;
 
 	return (
 		<StyledDiv>
 			<LeftBox>
-				<ProfilePicture src="" alt="" />
+				<ProfilePicture src={`${userImg}`} alt="" />
 
 				{liked ? (
 					<LikedIcon onClick={toogleLike} className="icon liked" />
@@ -27,17 +27,14 @@ export default function Post() {
 
 			<RightBox>
 				<TopLine>
-					<UserName>Joao</UserName>
+					<UserName>{userName}</UserName>
 					<div className="div">
 						<EditIcon className="icon" />
 						<DeleteIcon className="icon" />
 					</div>
 				</TopLine>
 
-				<Text>
-					Muito maneiro esse tutorial de Material UI com React, deem
-					uma olhada! #react #material
-				</Text>
+				<Text>{text}</Text>
 
 				<LinkData />
 			</RightBox>
@@ -57,13 +54,13 @@ const StyledDiv = styled.div`
 	box-sizing: border-box;
 	padding: 18px 22px 20px 18px;
 	display: flex;
+	margin-bottom: 20px;
 `;
 
 const ProfilePicture = styled.img`
 	width: 50px;
 	height: 50px;
 	border-radius: 26.5px;
-	background-color: brown;
 	margin-bottom: 25px;
 `;
 

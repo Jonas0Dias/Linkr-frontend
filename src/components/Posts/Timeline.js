@@ -15,7 +15,6 @@ function Timeline() {
 export default Timeline;
 
 const StyledSection = styled.section`
-	background-color: red;
 	width: 55%;
 	height: 100%;
 	margin-top: 150px;

@@ -4,6 +4,7 @@ import Post from "./Post";
 
 function Posts() {
 	const [postsData, setPostsData] = useState(null);
+	// ALTERAR PARA TOKEN SALVO
 	const token = "3be9b83e-8bd1-4da6-8a57-a6a48f9d54a7";
 
 	useEffect(() => {

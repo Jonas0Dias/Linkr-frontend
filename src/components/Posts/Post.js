@@ -7,7 +7,14 @@ import {
 } from "react-icons/ri";
 import { useState } from "react";
 
-export default function Post({ userName, text, userImg }) {
+export default function Post({
+	userName,
+	text,
+	userImg,
+	url,
+	urlTitle,
+	urlImg,
+}) {
 	const [liked, setLiked] = useState(false);
 	const likeCounts = 10;
 
